@@ -1,7 +1,12 @@
-function copiar(){
-    navigator.clipboard.writeText(
-        document.getElementById("encrypt-text").value
-    );
+function copiar() {
+    var content = document.querySelector("#encrypt-text");
+    content.select();
+    document.execCommand("copy")
+    Swal.fire(
+        'Copiado',
+        'El contenido fue copiado',
+        'Success'
+    )
 }
 
-document.querySelector("copy").addEventListener("click", copiar);
+

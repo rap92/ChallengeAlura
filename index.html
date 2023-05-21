@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura - Challenge</title>
+    <!----------------Link CSS------------->
+    <link rel="stylesheet" href="/css/style.css">    
+    <!--Remix Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
 </head>
 <body>
     <header class="header">
@@ -15,12 +19,12 @@
     <main class="container">
         <div class="container">
             <div class="left">
-                <input id="input-text" class="input-text" type="text" placeholder="Ingrese texto aquí">
+                <input id="input-text" class="input-text" type="text" placeholder="Ingrese el texto aquí">
             </div>  
             <div class="right">
                 <img id="right-image" src="/img/muneco-alura.png" alt="Imagen Alura">
-                <h2 id="text-error">Ningún mensaje fue encontrado</h2>
-                <textarea name="encrypt-text" id="encrypt-text" cols="30" rows="10">Ingrese el texto que desee encriptar o desencriptar.</textarea>
+                <h2 id="text-error" style="text-align: center;">Ningún mensaje fue encontrado</h2>
+                <textarea name="encrypt-text" id="encrypt-text" cols="30" rows="7" readonly >Ingrese el texto que desee encriptar o desencriptar.</textarea>
                 <button type="button" name="button" id="copy" onclick="copiar()">Copiar</button>
             </div>  
             <div class="left-button">
@@ -31,13 +35,14 @@
         </div>        
     </main>
     <footer>
-        <a href="https://github.com/rap92" target="_blank"><img src="./img/icons8-github.svg" alt="Logo Github" href="https://github.com/rap92"></a>
-        <a href="https://www.linkedin.com/in/ruben-ancco-peralta-183b49174/" target="_blank"><img src="./img/icons8-linkedin.svg" alt="Logo Linkendin" href="https://www.linkedin.com/in/ruben-ancco-peralta-183b49174/"></a>
+        <a class= "github" href="https://github.com/rap92" target="_blank"><img src="./img/icons8-github.svg" alt="Logo Github" href="https://github.com/rap92"></a>
+        <a class= "linkedin" href="https://www.linkedin.com/in/ruben-ancco-peralta-183b49174/" target="_blank"><img src="./img/icons8-linkedin.svg" alt="Logo Linkendin" href="https://www.linkedin.com/in/ruben-ancco-peralta-183b49174/"></a>
     </footer>
-
     <!--------------------Script JavaScript------------------>
     <script src="./js/Copiar.js"></script>
     <script src="./js/Desencriptar.js"></script>
     <script src="./js/Encriptar.js"></script>
+    <!--------------------Scritp de icono-------------------->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
