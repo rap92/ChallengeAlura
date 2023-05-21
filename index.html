@@ -1,48 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura - Challenge</title>
-    <!----------------Link CSS------------->
-    <link rel="stylesheet" href="/css/style.css">    
-    <!--Remix Icon CDN-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <!----------------Link a CSS------------->
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/reset.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!----------------Icono Remix------------>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
-    <header class="header">
-        <a class="logo">
-            <img src="/img/logo-alura.png" alt="Logo">
-        </a>
+    <!---------------------Cabecera del sitio web--------------------->
+    <header class="logo-img">
+        <a href="https://www.aluracursos.com/" target="_blank"><img class="logo" src="./img/logo-alura.png" alt="Logo de Alura"></a>
     </header>
-    <main class="container">
-        <div class="container">
-            <div class="left">
-                <input id="input-text" class="input-text" type="text" placeholder="Ingrese el texto aquí">
-            </div>  
-            <div class="right">
-                <img id="right-image" src="/img/muneco-alura.png" alt="Imagen Alura">
-                <h2 id="text-error" style="text-align: center;">Ningún mensaje fue encontrado</h2>
-                <textarea name="encrypt-text" id="encrypt-text" cols="30" rows="7" readonly >Ingrese el texto que desee encriptar o desencriptar.</textarea>
-                <button type="button" name="button" id="copy" onclick="copiar()">Copiar</button>
-            </div>  
-            <div class="left-button">
+    <!---------------------Cuerpo del sitio web----------------------->
+    <main>
+        <!-----------------Entra del texto---------------------------->
+        <section class="left">
+            <textarea name="input-text"  class="input-text" cols="30" rows="10" placeholder="Ingrese el texto aquí" autofocus></textarea>
+            <div>
                 <p><i class="ri-error-warning-fill">Solo minúsculas y sin acentos</i></p>
-                <button type="button" id="button-encrypt" onclick="encriptar()">Encriptar</button>
-                <button type="button" id="button-decrypt" onclick="desencriptar()">Desencriptar</button>
+            </div> 
+            <div class="button">
+                <button id="button-encrypt" onclick="encriptar()">Encriptar</button>
+                <button id="button-decrypt" onclick="desencriptar()">Desencriptar</button>                
             </div>
-        </div>        
+        </section>
+        <!-----------------Salida del texto.........................-->
+        <section class = "right"> 
+            <textarea name="output-text" class="output-text" cols="20" rows="15"></textarea>
+            <div class="ocultar">
+                <img id="right-image" src="./img/muneco-alura.png" alt="Imagen Alura">
+                <p class="text-error">Ningún mensaje fue encontrado</p>
+                <p class="encrypt-text" readonly>Ingresa el texto que desees encriptar o desencriptar.</p>
+                <p class="rectangulo"></p>                               
+            </div>   
+            <div>
+                <button type="button" id="button-copy" onclick="copiar()">Copiar</button> 
+            </div>         
+        </section>        
     </main>
+    <!-----------------------Pie de pagina---------------------------->
     <footer>
         <a class= "github" href="https://github.com/rap92" target="_blank"><img src="./img/icons8-github.svg" alt="Logo Github" href="https://github.com/rap92"></a>
         <a class= "linkedin" href="https://www.linkedin.com/in/ruben-ancco-peralta-183b49174/" target="_blank"><img src="./img/icons8-linkedin.svg" alt="Logo Linkendin" href="https://www.linkedin.com/in/ruben-ancco-peralta-183b49174/"></a>
     </footer>
-    <!--------------------Script JavaScript------------------>
+    <!-----------------------Script JavaScript------------------------>
     <script src="./js/Copiar.js"></script>
     <script src="./js/Desencriptar.js"></script>
     <script src="./js/Encriptar.js"></script>
-    <!--------------------Scritp de icono-------------------->
+    <!---------------------Alerta cuando se copie el texto------------->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
